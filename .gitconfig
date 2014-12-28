@@ -1,0 +1,29 @@
+[user]
+  name = Will Faurot
+  email = wfaurot@gmail.com
+[color]
+  ui = true
+[color "diff"]
+  whitespace = red reverse
+[alias]
+  d  = diff --patience --ignore-space-change
+  co = checkout
+  st = status
+  br = branch
+  brpb = !git rev-parse --abbrev-ref HEAD | xargs echo -n | pbcopy
+  brcrnt = rev-parse --abbrev-ref HEAD
+  shas = log --pretty=format:\"%H\"
+  hist = log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yellow)%d%Creset %Cblue[%an]%Creset\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+  praise = blame
+  count = shortlog -sn
+  authors = ! git log --format=\"%ae %an\" | sort -u | column -t
+  ; authors = ! git log --format=\"%aeDELIMITER%an\" | sort -u | ruby -rpp -ne \'BEGIN { seen = {} }\; seen.[]= *$_.split("DELIMITER")\; END { col = seen.keys.max_by(&:size).size\; seen.each { |email, name| printf \"\\e[32m%\#{col}s \\e[34m%-s\", email, name } }\'
+[push]
+  default = upstream
+[core]
+	excludesfile = /Users/will/.gitignore_global
+  editor = vim
+[merge]
+  conflictstyle = diff3
