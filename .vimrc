@@ -18,7 +18,7 @@ set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
 set expandtab                   " use spaces, not tabs (optional)
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
-autocmd FileType go setlocal shiftwidth=4 tabstop=4 " 4 spaces for Go
+autocmd FileType c,go setlocal shiftwidth=4 tabstop=4
 
 "" Searching
 set hlsearch                    " highlight matches
@@ -43,8 +43,6 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-"" Will's tings
-
 set laststatus=2 " airline fix for not showing without split panes
 
 "" ultisnips
@@ -52,7 +50,7 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
-"" keybinds
+"" my keybinds
 let mapleader="," " remap leader to comma
 imap jk <Esc>
 imap kj <Esc>
