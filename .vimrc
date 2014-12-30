@@ -61,6 +61,15 @@ map <Leader>n :NERDTreeToggle<cr>
 map <Leader>p orequire "pry"<cr>binding.pry<esc>
 map <Leader>cl iconsole.log();<esc>hi " insert console.log(); and place cursor inside parens in insert mode
 
+"" https://https://github.com/hwartig/vim-seeing-is-believing
+nmap <buffer> <F5> <Plug>(seeing-is-believing-run)
+xmap <buffer> <F5> <Plug>(seeing-is-believing-run)
+imap <buffer> <F5> <Plug>(seeing-is-believing-run)
+
+nmap <buffer> <F4> <Plug>(seeing-is-believing-mark)
+xmap <buffer> <F4> <Plug>(seeing-is-believing-mark)
+imap <buffer> <F4> <Plug>(seeing-is-believing-mark)
+
 " Emacs/Readline keybindings for commandline mode
 " http://tiswww.case.edu/php/chet/readline/readline.html#SEC4
 " many of these taken from vimacs http://www.vim.org/scripts/script.php?script_id=300
