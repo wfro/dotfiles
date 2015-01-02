@@ -2,8 +2,8 @@ execute pathogen#infect()
 
 set rtp+=/usr/local/go/misc/vim
 
-colorscheme solarized
-set background=dark
+colorscheme jellybeans
+" set background=dark
 
 "" ==========  These come from Mislav (http://mislav.uniqpath.com/2011/12/vim-revisited/)  ==========
 set nocompatible                " choose no compatibility with legacy vi
@@ -59,7 +59,7 @@ map <Leader>rbow :RainbowParenthesesToggle<cr> " rainbow parens for lisps
 map <Leader>s :w %<cr>
 map <Leader>n :NERDTreeToggle<cr>
 map <Leader>p orequire "pry"<cr>binding.pry<esc>
-map <Leader>cl iconsole.log();<esc>hi " insert console.log(); and place cursor inside parens in insert mode
+map <Leader>cl iconsole.log();<esc>hi
 
 "" https://https://github.com/hwartig/vim-seeing-is-believing
 nmap <buffer> <F5> <Plug>(seeing-is-believing-run)
