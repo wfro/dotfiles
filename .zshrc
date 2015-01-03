@@ -83,14 +83,11 @@ function chpwd() {
     la -a
 }
 
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 alias cdp="cd ~/Dropbox/projects"
-alias cdd="cd ~/Dropbox/dots"
+alias cdd="cd ~/Dropbox/projects/dotfiles"
 alias todo="vim ~/Dropbox/projects/TODO.md"
-alias cdx="cd ~/Dropbox/projects/exercism"324
-alias blerg="cd ~/Dropbox/projects/notes/blergs"
+alias cdx="cd ~/Dropbox/projects/exercism"
+alias notes="cd ~/Dropbox/projects/notes/outlines"
 
 # navigation
 alias ..="cd .."
@@ -126,5 +123,5 @@ alias brpb=" git rev-parse --abbrev-ref HEAD | xargs echo -n | pbcopy"
 
 # configs
 alias emcf= "cd ~/.emacs.d"
-alias vicf= "vim ~/Dropbox/dots/.vimrc"
+alias vicf= "vim ~/Dropbox/projects/dotfiles/.vimrc"
 
