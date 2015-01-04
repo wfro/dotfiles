@@ -59,7 +59,7 @@ imap jj <Esc>
 map <Leader>rbow :RainbowParenthesesToggle<cr> " rainbow parens for lisps
 map <Leader>s :w %<cr>
 map <Leader>n :NERDTreeToggle<cr>
-map <Leader>p orequire "pry"<cr>binding.pry<esc>
+map <Leader>p orequire "pry"; binding.pry<esc>
 map <Leader>cl oconsole.log();<esc>hi
 
 " https://https://github.com/hwartig/vim-seeing-is-believing
