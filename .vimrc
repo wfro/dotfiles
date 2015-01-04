@@ -60,7 +60,7 @@ map <Leader>rbow :RainbowParenthesesToggle<cr> " rainbow parens for lisps
 map <Leader>s :w %<cr>
 map <Leader>n :NERDTreeToggle<cr>
 map <Leader>p orequire "pry"<cr>binding.pry<esc>
-map <Leader>cl iconsole.log();<esc>hi
+map <Leader>cl oconsole.log();<esc>hi
 
 " https://https://github.com/hwartig/vim-seeing-is-believing
 nmap <buffer> <F5> <Plug>(seeing-is-believing-run)
