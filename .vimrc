@@ -61,6 +61,7 @@ map <Leader>s :w %<cr>
 map <Leader>n :NERDTreeToggle<cr>
 map <Leader>p orequire "pry"; binding.pry<esc>
 map <Leader>cl oconsole.log();<esc>hi
+map <Leader>de odebugger;<esc>:w %<cr>
 
 " https://https://github.com/hwartig/vim-seeing-is-believing
 nmap <buffer> <F5> <Plug>(seeing-is-believing-run)
