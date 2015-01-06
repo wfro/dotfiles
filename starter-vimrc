@@ -1,0 +1,78 @@
+execute pathogen#infect()
+
+set rtp+=/usr/local/go/misc/vim
+
+colorscheme jellybeans
+
+set nocompatible                " choose no compatibility with legacy vi
+syntax enable                   " enable syntax highlighting
+set encoding=utf-8
+set showcmd                     " display incomplete commands
+filetype plugin indent on       " load file type plugins + indentation
+
+" Whitespace
+set nowrap                      " don't wrap lines
+set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
+set expandtab                   " use spaces, not tabs (optional)
+set backspace=indent,eol,start  " backspace through everything in insert mode
+
+" Searching
+set hlsearch                    " highlight matches
+set incsearch                   " incremental searching
+
+" https://github.com/JoshCheek/dotfiles
+set nobackup                                        " no backup files
+set nowritebackup                                   " only in case you don't want a backup file while editing
+set noswapfile                                      " no swap files
+set scrolloff=4                                     " adds top/bottom buffer between cursor and window
+set cursorline                                      " colours the line the cursor is on
+set number                                          " line numbers
+
+" easier navigation between split windows
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
+" rebind esc to something more easily reachable, popular alternatives
+" are jj, jk, ii
+imap kj <Esc>
+
+" leader keybinds
+" so for pry insertion you'd hit comma, p (in a sequence, not simultaneously)
+let mapleader="," " remap leader to comma
+map <Leader>p orequire "pry"; binding.pry<esc>
+map <Leader>cl oconsole.log();<esc>hi
+map <Leader>de odebugger;<esc>:w %<cr>
+
+" Emacs/Readline keybindings for commandline/insert mode
+" These can be helpful in insert mode for small movements as opposed to having
+" to switch back to normal mode
+"
+" navigation
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+cnoremap <C-f> <Right>
+cnoremap <C-b> <Left>
+cnoremap <M-b> <S-Left>
+cnoremap <M-f> <S-Right>
+" insert mode
+imap <C-b> <Left>
+imap <C-f> <Right>
+imap <C-a> <Home>
+imap <C-e> <End>
+
+" strip trailing whitespace
+function! <SID>StripTrailingWhitespaces()
+  " preparation: save last search, and cursor position.
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " do the business:
+  %s/\s\+$//e
+  " clean up: restore previous search history, and cursor position
+  let @/=_s
+  call cursor(l, c)
+endfunction
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
