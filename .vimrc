@@ -61,6 +61,7 @@ map <Leader>s :w %<cr>
 map <Leader>n :NERDTreeToggle<cr>
 map <Leader>p orequire "pry"; binding.pry<esc>
 map <Leader>db :e db/schema.rb<cr>
+map <Leader>ro :e config/routes.rb<cr>
 map <Leader>cl oconsole.log();<esc>hi
 map <Leader>de odebugger;<esc>:w %<cr>
 
