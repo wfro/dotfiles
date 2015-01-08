@@ -56,7 +56,7 @@ let mapleader="," " remap leader to comma
 imap jk <Esc>
 imap kj <Esc>
 imap jj <Esc>
-map <Leader>rbow :RainbowParenthesesToggle<cr> " rainbow parens for lisps
+map <Leader>rbow :RainbowParenthesesToggle<cr>
 map <Leader>s :w %<cr>
 map <Leader>n :NERDTreeToggle<cr>
 map <Leader>p orequire "pry"; binding.pry<esc>
