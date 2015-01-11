@@ -72,6 +72,7 @@ map <Leader>cl oconsole.log();<esc>hi
 map <Leader>de odebugger;<esc>:w %<cr>
 " vimux - send commands to a tmux pane
 map <Leader>rj :w %<cr>:call VimuxRunCommand("clear; jasmine-node --verbose " . bufname("%"))<CR>
+map <Leader>rs :w %<cr>:call VimuxRunCommand("clear; bundle exec rspec")<CR>
 
 " https://https://github.com/hwartig/vim-seeing-is-believing
 nmap <buffer> <F5> <Plug>(seeing-is-believing-run)
