@@ -56,14 +56,18 @@ let mapleader="," " remap leader to comma
 imap jk <Esc>
 imap kj <Esc>
 imap jj <Esc>
-map <Leader>rbow :RainbowParenthesesToggle<cr>
+" general
 map <Leader>s :w %<cr>
 map <Leader>n :NERDTreeToggle<cr>
+" clojure/lisps
+map <Leader>rbow :RainbowParenthesesToggle<cr>
+" ruby/rails
 map <Leader>p orequire "pry"; binding.pry<esc>
 map <Leader>db :e db/schema.rb<cr>
 map <Leader>ro :e config/routes.rb<cr>
 map <Leader>em :Emodel<Space>
 map <Leader>ec :Econtroller<Space>
+" javascript
 map <Leader>cl oconsole.log();<esc>hi
 map <Leader>de odebugger;<esc>:w %<cr>
 " vimux - send commands to a tmux pane
