@@ -53,10 +53,8 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " my keybinds
 let mapleader="," " remap leader to comma
-imap jk <Esc>
-imap kj <Esc>
-imap jj <Esc>
 " general
+imap kj <Esc>
 map <Leader>s :w %<cr>
 map <Leader>n :NERDTreeToggle<cr>
 " clojure/lisps
