@@ -89,6 +89,8 @@ alias todo="vim ~/Dropbox/projects/TODO.md"
 alias cdx="cd ~/Dropbox/projects/exercism"
 alias notes="cd ~/Dropbox/projects/notes/outlines"
 
+alias sbox="bundle exec rails c --sandbox"
+
 # navigation
 alias ..="cd .."
 alias ...="cd ../.."
