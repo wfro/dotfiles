@@ -66,6 +66,8 @@ map <Leader>em :Emodel<Space>
 map <Leader>ec :Econtroller<Space>
 map <Leader>cl oconsole.log();<esc>hi
 map <Leader>de odebugger;<esc>:w %<cr>
+" vimux - send commands to a tmux pane
+map <Leader>rj :call VimuxRunCommand("clear; jasmine-node " . bufname("%"))<CR>
 
 " https://https://github.com/hwartig/vim-seeing-is-believing
 nmap <buffer> <F5> <Plug>(seeing-is-believing-run)
