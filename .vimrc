@@ -66,6 +66,7 @@ map <Leader>ro :e config/routes.rb<cr>
 map <Leader>em :Emodel<Space>
 map <Leader>ec :Econtroller<Space>
 map <Leader>es :Espec<Space>
+map <Leader>bn :!bundle install<cr>
 " javascript
 map <Leader>cl oconsole.log();<esc>hi
 map <Leader>de odebugger;<esc>:w %<cr>
