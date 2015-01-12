@@ -56,8 +56,6 @@ let mapleader="," " remap leader to comma
 imap kj <Esc>
 map <Leader>s :w %<cr>
 map <Leader>n :NERDTreeToggle<cr>
-" clojure/lisps
-map <Leader>rbow :RainbowParenthesesToggle<cr>
 " ruby/rails
 map <Leader>p orequire "pry"; binding.pry<esc>
 map <Leader>db :e db/schema.rb<cr>
