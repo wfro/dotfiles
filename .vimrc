@@ -53,7 +53,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " my keybinds
 let mapleader="," " remap leader to comma
-" general
 imap kj <Esc>
 map <Leader>s :w %<cr>
 map <Leader>n :NERDTreeToggle<cr>
@@ -73,6 +72,21 @@ map <Leader>de odebugger;<esc>:w %<cr>
 " vimux - send commands to a tmux pane
 map <Leader>rj :w %<cr>:call VimuxRunCommand("clear; jasmine-node --verbose " . bufname("%"))<CR>
 map <Leader>rs :w %<cr>:call VimuxRunCommand("clear; bundle exec rspec")<CR>
+" fugitive git bindings
+" https://www.reddit.com/r/vim/comments/21f4gm/best_workflow_when_using_fugitive/cgciltz
+nnoremap <Leader>ga :Git add %:p<CR><CR>
+nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <Leader>gc :Gcommit -v -q<CR>
+nnoremap <Leader>gt :Gcommit -v -q %:p<CR>
+nnoremap <Leader>gd :Gdiff<CR>
+nnoremap <Leader>ge :Gedit<CR>
+nnoremap <Leader>gr :Gread<CR>
+nnoremap <Leader>gw :Gwrite<CR><CR>
+nnoremap <Leader>gl :silent! Glog<CR>:bot copen<CR>
+nnoremap <Leader>gp :Ggrep<Space>
+nnoremap <Leader>gm :Gmove<Space>
+nnoremap <Leader>gb :Git branch<Space>
+nnoremap <Leader>go :Git checkout<Space>
 
 " https://https://github.com/hwartig/vim-seeing-is-believing
 nmap <buffer> <F5> <Plug>(seeing-is-believing-run)
@@ -100,23 +114,7 @@ imap <C-f> <Right>
 imap <C-a> <Home>
 imap <C-e> <End>
 
-" fugitive git bindings
-" https://www.reddit.com/r/vim/comments/21f4gm/best_workflow_when_using_fugitive/cgciltz
-nnoremap <Leader>ga :Git add %:p<CR><CR>
-nnoremap <Leader>gs :Gstatus<CR>
-nnoremap <Leader>gc :Gcommit -v -q<CR>
-nnoremap <Leader>gt :Gcommit -v -q %:p<CR>
-nnoremap <Leader>gd :Gdiff<CR>
-nnoremap <Leader>ge :Gedit<CR>
-nnoremap <Leader>gr :Gread<CR>
-nnoremap <Leader>gw :Gwrite<CR><CR>
-nnoremap <Leader>gl :silent! Glog<CR>:bot copen<CR>
-nnoremap <Leader>gp :Ggrep<Space>
-nnoremap <Leader>gm :Gmove<Space>
-nnoremap <Leader>gb :Git branch<Space>
-nnoremap <Leader>go :Git checkout<Space>
-
-"" strip trailing whitespace
+" strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
   " Preparation: save last search, and cursor position.
   let _s=@/
