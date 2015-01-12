@@ -29,12 +29,13 @@ set incsearch                   " incremental searching
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " https://github.com/JoshCheek/dotfiles
-set nobackup                                        " no backup files
-set nowritebackup                                   " only in case you don't want a backup file while editing
-set noswapfile                                      " no swap files
-set scrolloff=4                                     " adds top/bottom buffer between cursor and window
-set cursorline                                      " colours the line the cursor is on
-set number                                          " line numbers
+set nobackup                    " no backup files
+set nowritebackup               " only in case you don't want a backup file while editing
+set noswapfile                  " no swap files
+set scrolloff=4                 " adds top/bottom buffer between cursor and window
+set cursorline                  " colours the line the cursor is on
+set number                      " line numbers
+set laststatus=2                " airline fix for not showing status bar in split panes
 
 " easier navigation between split windows
 nnoremap <c-j> <c-w>j
@@ -42,16 +43,13 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-" airline fix for status bar not showing without split panes
-set laststatus=2
-
 " ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " my keybinds
-let mapleader="," " remap leader to comma
+let mapleader=","
 imap kj <Esc>
 map <Leader>s :w %<cr>
 map <Leader>n :NERDTreeToggle<cr>
