@@ -21,6 +21,9 @@ set backspace=indent,eol,start  " backspace through everything in insert mode
 " 4 spaces instead of 2 in C and golang
 autocmd FileType c,go setlocal shiftwidth=4 tabstop=4
 
+" Relative line numbers
+set relativenumber
+
 " Searching
 set hlsearch                    " highlight matches
 set incsearch                   " incremental searching
