@@ -1,10 +1,29 @@
-execute pathogen#infect()
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-set rtp+=/usr/local/go/misc/vim
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'kien/ctrlp.vim'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rails'
+Plugin 'pangloss/vim-javascript'
+Plugin 'tpope/vim-fugitive'
+Plugin 'bling/vim-airline'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tpope/vim-ragtag'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 colorscheme jellybeans
 
-set nocompatible                " choose no compatibility with legacy vi
 syntax enable                   " enable syntax highlighting
 set encoding=utf-8
 set showcmd                     " display incomplete commands
@@ -28,18 +47,18 @@ set scrolloff=4                                     " adds top/bottom buffer bet
 set cursorline                                      " colours the line the cursor is on
 set number                                          " line numbers
 
-" easier navigation between split windows
+" Easier navigation between split windows
+" These correspond to the vim movement scheme
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-" rebind esc to something more easily reachable, popular alternatives
-" are jj, jk, ii
+" rebind esc to something more easily reachable, popular alternatives are jj, jk, ii
 imap kj <Esc>
 
 " leader keybinds
-" so for pry insertion you'd hit comma, p (in a sequence, not simultaneously)
+" ex. for pry insertion you'd hit ,p
 let mapleader="," " remap leader to comma
 map <Leader>p orequire "pry"; binding.pry<esc>
 map <Leader>cl oconsole.log();<esc>hi
