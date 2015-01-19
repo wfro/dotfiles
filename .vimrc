@@ -37,7 +37,6 @@ set nowritebackup               " only in case you don't want a backup file whil
 set noswapfile                  " no swap files
 set scrolloff=4                 " adds top/bottom buffer between cursor and window
 set cursorline                  " colours the line the cursor is on
-set number                      " line numbers
 set laststatus=2                " airline fix for not showing status bar in split panes
 
 " easier navigation between split windows
