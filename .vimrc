@@ -9,10 +9,12 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'benmills/vimux'
 Plugin 'jgdavey/vim-turbux'
+Plugin 'christoomey/vim-tmux-navigator'     " enables <C-h/j/k/l> split movement between tmux/vim
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'hwartig/vim-seeing-is-believing'
 Plugin 'fatih/vim-go'
 Plugin 'pangloss/vim-javascript'
 Plugin 'guns/vim-clojure-static'
@@ -93,6 +95,7 @@ map <Leader>de odebugger;<esc>:w %<cr>
 " vimux - send commands to a tmux pane
 map <Leader>rj :w %<cr>:call VimuxRunCommand("clear; jasmine-node --verbose " . bufname("%"))<CR>
 map <Leader>rs :w %<cr>:call VimuxRunCommand("clear; bundle exec rspec")<CR>
+map <Leader>rn :w %<cr>:call VimuxRunCommand("clear; ruby " . bufname("%"))<CR>
 " fugitive git bindings
 " https://www.reddit.com/r/vim/comments/21f4gm/best_workflow_when_using_fugitive/cgciltz
 nnoremap <Leader>ga :Git add %:p<CR><CR>
