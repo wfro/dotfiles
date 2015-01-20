@@ -4,31 +4,30 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'vim-scripts/vydark'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'benmills/vimux'
+Plugin 'jgdavey/vim-turbux'
 Plugin 'tpope/vim-rails'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'fatih/vim-go'
+Plugin 'pangloss/vim-javascript'
+Plugin 'guns/vim-clojure-static'
+Plugin 'tpope/vim-fireplace'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'vim-scripts/paredit.vim'
 Plugin 'raimondi/delimitmate'
-Plugin 'guns/vim-clojure-static'
-Plugin 'tpope/vim-fireplace'
-Plugin 'nanotech/jellybeans.vim'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tpope/vim-ragtag'
 Plugin 'bling/vim-airline'
+Plugin 'kien/ctrlp.vim'
+Plugin 'nanotech/jellybeans.vim'
 
 call vundle#end()
 filetype plugin indent on
 
-if $COLORTERM == 'gnome-terminal'
-  set t_Co=256
-endif
-
-" trying out relative line numbers
-set relativenumber
-
-
 colorscheme jellybeans
-" set background=dark " for solarized
 
 syntax enable
 set encoding=utf-8
@@ -56,7 +55,7 @@ set nowritebackup                                   " only in case you don't wan
 set noswapfile                                      " no swap files
 set scrolloff=4                                     " adds top/bottom buffer between cursor and window
 set cursorline                                      " colours the line the cursor is on
-set number                                          " line numbers
+set relativenumber
 vnoremap . :norm.<CR>                               " in visual mode, "." will for each line, go into normal mode and execute the "."
 
 " easier navigation between split windows
@@ -69,9 +68,9 @@ nnoremap <c-l> <c-w>l
 set laststatus=2
 
 " ultisnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" let g:UltiSnipsExpandTrigger="<tab>"
+" let g:UltiSnipsJumpForwardTrigger="<c-b>"
+" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " my keybinds
 let mapleader="," " remap leader to comma
