@@ -1,16 +1,38 @@
-execute pathogen#infect()
+set nocompatible                " required by Vundle
+filetype off
 
-set rtp+=/usr/local/go/misc/vim
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'vim-scripts/vydark'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-rails'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'vim-scripts/paredit.vim'
+Plugin 'raimondi/delimitmate'
+Plugin 'guns/vim-clojure-static'
+Plugin 'tpope/vim-fireplace'
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'bling/vim-airline'
+
+call vundle#end()
+filetype plugin indent on
+
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+endif
+
+" trying out relative line numbers
+set relativenumber
+
 
 colorscheme jellybeans
 " set background=dark " for solarized
 
-" http://mislav.uniqpath.com/2011/12/vim-revisited/
-set nocompatible                " choose no compatibility with legacy vi
 syntax enable
 set encoding=utf-8
 set showcmd                     " display incomplete commands
-filetype plugin indent on       " load file type plugins + indentation
 
 " Whitespace
 set nowrap                      " don't wrap lines
@@ -21,9 +43,6 @@ set backspace=indent,eol,start  " backspace through everything in insert mode
 " 4 spaces instead of 2 in C and golang
 autocmd FileType c,go setlocal shiftwidth=4 tabstop=4
 
-" Relative line numbers
-set relativenumber
-
 " Searching
 set hlsearch                    " highlight matches
 set incsearch                   " incremental searching
@@ -32,12 +51,13 @@ set incsearch                   " incremental searching
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " https://github.com/JoshCheek/dotfiles
-set nobackup                    " no backup files
-set nowritebackup               " only in case you don't want a backup file while editing
-set noswapfile                  " no swap files
-set scrolloff=4                 " adds top/bottom buffer between cursor and window
-set cursorline                  " colours the line the cursor is on
-set laststatus=2                " airline fix for not showing status bar in split panes
+set nobackup                                        " no backup files
+set nowritebackup                                   " only in case you don't want a backup file while editing
+set noswapfile                                      " no swap files
+set scrolloff=4                                     " adds top/bottom buffer between cursor and window
+set cursorline                                      " colours the line the cursor is on
+set number                                          " line numbers
+vnoremap . :norm.<CR>                               " in visual mode, "." will for each line, go into normal mode and execute the "."
 
 " easier navigation between split windows
 nnoremap <c-j> <c-w>j
@@ -45,13 +65,16 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
+" airline fix for status bar not showing without split panes
+set laststatus=2
+
 " ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " my keybinds
-let mapleader=","
+let mapleader="," " remap leader to comma
 imap kj <Esc>
 map <Leader>s :w %<cr>
 map <Leader>n :NERDTreeToggle<cr>
