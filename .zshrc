@@ -51,7 +51,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/Users/will/.rvm/gems/ruby-2.1.2/bin:/Users/will/.rvm/gems/ruby-2.1.2@global/bin:/Users/will/.rvm/rubies/ruby-2.1.2/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/will/bin:/Users/will/.rvm/bin"
+export PATH="$PATH:/Users/will/.rvm/gems/ruby-2.1.2/bin:/Users/will/.rvm/gems/ruby-2.1.2@global/bin:/Users/will/.rvm/rubies/ruby-2.1.2/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/will/bin:/Users/will/.rvm/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -75,7 +75,6 @@ export PATH="/Users/will/.rvm/gems/ruby-2.1.2/bin:/Users/will/.rvm/gems/ruby-2.1
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # ls after cd
 function chpwd() {
@@ -88,7 +87,6 @@ alias cdd="cd ~/Dropbox/projects/dotfiles"
 alias todo="vim ~/Dropbox/projects/TODO.md"
 alias cdx="cd ~/Dropbox/projects/exercism"
 alias notes="cd ~/Dropbox/projects/notes/outlines"
-
 
 # navigation
 alias ..="cd .."
@@ -110,8 +108,12 @@ alias la="ls -lFGgohqa" # hidden files
 alias be="bundle exec"
 
 alias v="vi ."
+
+# rails
 alias cons="bundle exec rails c"
 alias sbox="bundle exec rails c --sandbox"
+alias dbm="bundle exec rake db:migrate"
+
 
 # git
 alias gsh="git s" # git show with my custom options (see gitconfig)
@@ -130,3 +132,4 @@ alias brpb=" git rev-parse --abbrev-ref HEAD | xargs echo -n | pbcopy"
 alias emcf= "cd ~/.emacs.d"
 alias vicf= "vim ~/Dropbox/projects/dotfiles/.vimrc"
 
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
