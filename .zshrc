@@ -110,6 +110,8 @@ alias la="ls -lFGgohqa" # hidden files
 # bundle
 alias be="bundle exec"
 
+alias v="vi ."
+
 # git
 alias gsh="git s" # git show with my custom options (see gitconfig)
 alias gs=" git status"
