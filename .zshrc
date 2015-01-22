@@ -113,7 +113,11 @@ alias v="vi ."
 alias cons="bundle exec rails c"
 alias sbox="bundle exec rails c --sandbox"
 alias dbm="bundle exec rake db:migrate"
+alias rr="bundle exec rake routes"
 
+# javascript
+alias n="node"
+alias jn="jasmine node --verbose"
 
 # git
 alias gsh="git s" # git show with my custom options (see gitconfig)
