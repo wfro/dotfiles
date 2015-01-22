@@ -89,6 +89,7 @@ map <Leader>em :Emodel<Space>
 map <Leader>ec :Econtroller<Space>
 map <Leader>es :Espec<Space>
 map <Leader>bn :!bundle install<cr>
+map <Leader>rr :!rake routes<cr>
 " javascript
 map <Leader>cl oconsole.log();<esc>hi
 map <Leader>de odebugger;<esc>:w %<cr>
