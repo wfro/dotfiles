@@ -73,11 +73,6 @@ nnoremap <c-l> <c-w>l
 " airline fix for status bar not showing without split panes
 set laststatus=2
 
-" ultisnips
-" let g:UltiSnipsExpandTrigger="<tab>"
-" let g:UltiSnipsJumpForwardTrigger="<c-b>"
-" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
 " my keybinds
 let mapleader="," " remap leader to comma
 imap kj <Esc>
@@ -99,6 +94,7 @@ map <Leader>de odebugger;<esc>:w %<cr>
 map <Leader>rj :w %<cr>:call VimuxRunCommand("clear; jasmine-node --verbose " . bufname("%"))<CR>
 map <Leader>rs :w %<cr>:call VimuxRunCommand("clear; bundle exec rspec")<CR>
 map <Leader>rn :w %<cr>:call VimuxRunCommand("clear; ruby " . bufname("%"))<CR>
+map <Leader>rb :w %<cr>:call VimuxRunCommand("clear; jasmine-node --verbose " . expand("%:r") . "_spec.js")<CR>
 " fugitive git bindings
 " https://www.reddit.com/r/vim/comments/21f4gm/best_workflow_when_using_fugitive/cgciltz
 nnoremap <Leader>ga :Git add %:p<CR><CR>
