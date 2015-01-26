@@ -26,12 +26,14 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-ragtag'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
-Plugin 'nanotech/jellybeans.vim'
+Plugin 'noahfrederick/vim-hemisu'
+" Plugin 'nanotech/jellybeans.vim'
 
 call vundle#end()
 filetype plugin indent on
 
-colorscheme jellybeans
+colorscheme hemisu
+set background=dark
 
 syntax enable
 set encoding=utf-8
@@ -97,9 +99,6 @@ map <Leader>de odebugger;<esc>:w %<cr>
 map <Leader>rj :w %<cr>:call VimuxRunCommand("clear; jasmine-node --verbose " . bufname("%"))<CR>
 map <Leader>rs :w %<cr>:call VimuxRunCommand("clear; bundle exec rspec")<CR>
 map <Leader>rn :w %<cr>:call VimuxRunCommand("clear; ruby " . bufname("%"))<CR>
-" run this is an implementation file to run its corresponding test
-" keep in mind this will only work with minitest
-map <Leader>rb :w %<cr>:call VimuxRunCommand("clear; ruby " . expand("%:r") . "_test.rb")<CR>
 " fugitive git bindings
 " https://www.reddit.com/r/vim/comments/21f4gm/best_workflow_when_using_fugitive/cgciltz
 nnoremap <Leader>ga :Git add %:p<CR><CR>
