@@ -45,8 +45,9 @@ set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
 set expandtab                   " use spaces, not tabs (optional)
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
-" 4 spaces instead of 2 in C and golang
+" Language specific settings
 autocmd FileType c,go setlocal shiftwidth=4 tabstop=4
+autocmd FileType clojure :RainbowParenthesesToggle
 
 " Searching
 set hlsearch                    " highlight matches
@@ -94,7 +95,6 @@ map <Leader>de odebugger;<esc>:w %<cr>
 map <Leader>rj :w %<cr>:call VimuxRunCommand("clear; jasmine-node --verbose " . bufname("%"))<CR>
 map <Leader>rs :w %<cr>:call VimuxRunCommand("clear; bundle exec rspec")<CR>
 map <Leader>rn :w %<cr>:call VimuxRunCommand("clear; ruby " . bufname("%"))<CR>
-map <Leader>rb :w %<cr>:call VimuxRunCommand("clear; jasmine-node --verbose " . expand("%:r") . "_spec.js")<CR>
 " fugitive git bindings
 " https://www.reddit.com/r/vim/comments/21f4gm/best_workflow_when_using_fugitive/cgciltz
 nnoremap <Leader>ga :Git add %:p<CR><CR>
