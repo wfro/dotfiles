@@ -89,6 +89,7 @@ map <Leader>bn :!bundle install<cr>
 map <Leader>rr :!rake routes<cr>
 " javascript
 map <Leader>cl oconsole.log();<esc>hi
+map <Leader>cd oconsole.log("debugging");<esc>:w %<cr>
 map <Leader>de odebugger;<esc>:w %<cr>
 " vimux - send commands to a tmux pane
 map <Leader>rj :w %<cr>:call VimuxRunCommand("clear; jasmine-node --verbose " . bufname("%"))<CR>
