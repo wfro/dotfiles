@@ -95,6 +95,10 @@ map <Leader>de odebugger;<esc>:w %<cr>
 map <Leader>rj :w %<cr>:call VimuxRunCommand("clear; jasmine-node --verbose " . bufname("%"))<CR>
 map <Leader>rs :w %<cr>:call VimuxRunCommand("clear; bundle exec rspec")<CR>
 map <Leader>rn :w %<cr>:call VimuxRunCommand("clear; ruby " . bufname("%"))<CR>
+" run one-off scripts
+map <Leader>go :w%<cr>:!go %<cr>
+map <Leader>gn :w%<cr>:!node %<cr>
+map <Leader>gr :w%<cr>:!ruby %<cr>
 " fugitive git bindings
 " https://www.reddit.com/r/vim/comments/21f4gm/best_workflow_when_using_fugitive/cgciltz
 nnoremap <Leader>ga :Git add %:p<CR><CR>
