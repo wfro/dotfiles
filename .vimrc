@@ -34,35 +34,29 @@ filetype plugin indent on
 
 colorscheme hemisu
 set background=dark
-
 syntax enable
 set encoding=utf-8
 set showcmd                     " display incomplete commands
-
-" Whitespace
 set nowrap                      " don't wrap lines
 set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
 set expandtab                   " use spaces, not tabs (optional)
 set backspace=indent,eol,start  " backspace through everything in insert mode
+set hlsearch                    " highlight matches
+set incsearch                   " incremental searching
+set nobackup                    " no backup files
+set nowritebackup               " only in case you don't want a backup file while editing
+set noswapfile                  " no swap files
+set scrolloff=4                 " adds top/bottom buffer between cursor and window
+set cursorline                  " colours the line the cursor is on
+set relativenumber              " relative line numbers
+set laststatus=2                " fix for airline not showing without split panes
 
 " Language specific settings
 autocmd FileType c,go setlocal shiftwidth=4 tabstop=4
 autocmd FileType clojure :RainbowParenthesesToggle
 
-" Searching
-set hlsearch                    " highlight matches
-set incsearch                   " incremental searching
-
 " close vim if NERDTree is the only open buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-" https://github.com/JoshCheek/dotfiles
-set nobackup                                        " no backup files
-set nowritebackup                                   " only in case you don't want a backup file while editing
-set noswapfile                                      " no swap files
-set scrolloff=4                                     " adds top/bottom buffer between cursor and window
-set cursorline                                      " colours the line the cursor is on
-set relativenumber
 
 " easier navigation between split windows
 nnoremap <c-j> <c-w>j
@@ -70,10 +64,6 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-" airline fix for status bar not showing without split panes
-set laststatus=2
-
-" my keybinds
 let mapleader="," " remap leader to comma
 imap kj <Esc>
 map <Leader>s :w %<cr>
@@ -97,7 +87,7 @@ map <Leader>rs :w %<cr>:call VimuxRunCommand("clear; bundle exec rspec")<CR>
 map <Leader>rn :w %<cr>:call VimuxRunCommand("clear; ruby " . bufname("%"))<CR>
 " run one-off scripts
 map <Leader>go :w%<cr>:!go %<cr>
-map <Leader>gn :w%<cr>:!node %<cr>
+map <Leader>gj :w%<cr>:!node %<cr>
 map <Leader>gr :w%<cr>:!ruby %<cr>
 " fugitive git bindings
 " https://www.reddit.com/r/vim/comments/21f4gm/best_workflow_when_using_fugitive/cgciltz
