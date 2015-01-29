@@ -87,6 +87,7 @@ map <Leader>rs :w %<cr>:call VimuxRunCommand("clear; bundle exec rspec")<CR>
 map <Leader>rn :w %<cr>:call VimuxRunCommand("clear; ruby " . bufname("%"))<CR>
 " run one-off scripts
 map <Leader>go :w%<cr>:!go run %<cr>
+map <Leader>gt :w%<cr>:!go test<cr>
 map <Leader>gj :w%<cr>:!node %<cr>
 map <Leader>gr :w%<cr>:!ruby %<cr>
 " fugitive git bindings
