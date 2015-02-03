@@ -26,14 +26,15 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-ragtag'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
-Plugin 'noahfrederick/vim-hemisu'
+Plugin 'altercation/vim-colors-solarized'
+" Plugin 'noahfrederick/vim-hemisu'
 " Plugin 'nanotech/jellybeans.vim'
 
 call vundle#end()
 filetype plugin indent on
 
-colorscheme hemisu
 set background=dark
+colorscheme solarized
 syntax enable
 set encoding=utf-8
 set showcmd                     " display incomplete commands
@@ -95,15 +96,6 @@ map <Leader>gr :w%<cr>:!ruby %<cr>
 nnoremap <Leader>ga :Git add %:p<CR><CR>
 nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>gc :Gcommit -v -q<CR>
-
-" https://https://github.com/hwartig/vim-seeing-is-believing
-nmap <buffer> <F5> <Plug>(seeing-is-believing-run)
-xmap <buffer> <F5> <Plug>(seeing-is-believing-run)
-imap <buffer> <F5> <Plug>(seeing-is-believing-run)
-
-nmap <buffer> <F4> <Plug>(seeing-is-believing-mark)
-xmap <buffer> <F4> <Plug>(seeing-is-believing-mark)
-imap <buffer> <F4> <Plug>(seeing-is-believing-mark)
 
 " Emacs/Readline keybindings for commandline mode
 " http://tiswww.case.edu/php/chet/readline/readline.html#SEC4
