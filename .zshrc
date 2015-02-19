@@ -108,6 +108,7 @@ alias la="ls -lFGgohqa" # hidden files
 alias be="bundle exec"
 
 alias v="vi ."
+alias gofro="cd ~/Dropbox/projects/go/src/github.com/wfro"
 
 # rails
 alias cons="bundle exec rails c"
@@ -135,5 +136,8 @@ alias brpb=" git rev-parse --abbrev-ref HEAD | xargs echo -n | pbcopy"
 # configs
 alias emcf= "cd ~/.emacs.d"
 alias vicf= "vim ~/Dropbox/projects/dotfiles/.vimrc"
+alias vcs="vim ~/Dropbox/projects/notes/vim-cheat-sheet.md"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export GOPATH=$HOME/Dropbox/projects/go
+export PATH=$PATH:$GOPATH/bin
