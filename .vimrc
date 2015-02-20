@@ -53,7 +53,6 @@ set relativenumber              " relative line numbers
 set laststatus=2                " fix for airline not showing without split panes
 
 " Language specific settings
-autocmd FileType c,go setlocal shiftwidth=4 tabstop=4
 autocmd FileType clojure :RainbowParenthesesToggle
 
 " close vim if NERDTree is the only open buffer
