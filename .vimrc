@@ -33,6 +33,7 @@ Plugin 'altercation/vim-colors-solarized'
 call vundle#end()
 filetype plugin indent on
 
+" Mostly from https://github.com/JoshCheek/dotfiles/blob/master/vimrc
 set background=dark
 colorscheme solarized
 syntax enable
