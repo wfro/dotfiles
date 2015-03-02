@@ -53,7 +53,7 @@ set cursorline                  " colours the line the cursor is on
 set relativenumber              " relative line numbers
 set laststatus=2                " fix for airline not showing without split panes
 
-" Language specific settings
+" Skittles ftw
 autocmd FileType clojure :RainbowParenthesesToggle
 
 " close vim if NERDTree is the only open buffer
@@ -72,20 +72,17 @@ map <Leader>n :NERDTreeToggle<cr>
 " ruby/rails
 map <Leader>p orequire "pry"; binding.pry<esc>
 map <Leader>db :e db/schema.rb<cr>
-map <Leader>ro :e config/routes.rb<cr>
 map <Leader>em :Emodel<Space>
 map <Leader>ec :Econtroller<Space>
 map <Leader>es :Espec<Space>
 map <Leader>bn :!bundle install<cr>
-map <Leader>rr :!rake routes<cr>
 " javascript
 map <Leader>cl oconsole.log();<esc>hi
 map <Leader>cd oconsole.log("debugging");<esc>:w %<cr>
 map <Leader>de odebugger;<esc>:w %<cr>
 " vimux - send commands to a tmux pane
-map <Leader>rj :w %<cr>:call VimuxRunCommand("clear; jasmine-node --verbose " . bufname("%"))<CR>
-map <Leader>rs :w %<cr>:call VimuxRunCommand("clear; bundle exec rspec")<CR>
-map <Leader>rn :w %<cr>:call VimuxRunCommand("clear; ruby " . bufname("%"))<CR>
+map <Leader>jj :w %<cr>:call VimuxRunCommand("clear; jasmine-node --verbose " . bufname("%"))<CR>
+map <Leader>js :w %<cr>:call VimuxRunCommand("clear; bundle exec rspec")<CR>
 " fugitive git bindings
 " https://www.reddit.com/r/vim/comments/21f4gm/best_workflow_when_using_fugitive/cgciltz
 nnoremap <Leader>ga :Git add %:p<CR><CR>
