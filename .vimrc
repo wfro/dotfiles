@@ -80,6 +80,9 @@ map <Leader>bn :!bundle install<cr>
 map <Leader>cl oconsole.log();<esc>hi
 map <Leader>cd oconsole.log("debugging");<esc>:w %<cr>
 map <Leader>de odebugger;<esc>:w %<cr>
+" go
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>t <Plug>(go-test)
 " vimux - send commands to a tmux pane
 map <Leader>jj :w %<cr>:call VimuxRunCommand("clear; jasmine-node --verbose " . bufname("%"))<CR>
 map <Leader>js :w %<cr>:call VimuxRunCommand("clear; bundle exec rspec")<CR>
