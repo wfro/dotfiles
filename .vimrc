@@ -80,6 +80,7 @@ map <Leader>bn :!bundle install<cr>
 map <Leader>cl oconsole.log();<esc>hi
 map <Leader>cd oconsole.log("debugging");<esc>:w %<cr>
 map <Leader>de odebugger;<esc>:w %<cr>
+map <Leader>r :w%<cr>:!npm test<cr>
 " go
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>t <Plug>(go-test)
