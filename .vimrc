@@ -67,7 +67,7 @@ nnoremap <c-l> <c-w>l
 
 let mapleader="," " remap leader to comma
 imap kj <Esc>
-map <Leader>s :w %<cr>
+map <Leader>w :w %<cr>
 map <Leader>n :NERDTreeToggle<cr>
 " ruby/rails
 map <Leader>p orequire "pry"; binding.pry<esc>
@@ -80,7 +80,6 @@ map <Leader>bn :!bundle install<cr>
 map <Leader>cl oconsole.log();<esc>hi
 map <Leader>cd oconsole.log("debugging");<esc>:w %<cr>
 map <Leader>de odebugger;<esc>:w %<cr>
-map <Leader>r :w%<cr>:!npm test<cr>
 " go
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>t <Plug>(go-test)
