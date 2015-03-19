@@ -35,11 +35,13 @@ alias rr="bundle exec rake routes"
 # git
 alias gsh="git s" # git show with my custom options (see gitconfig)
 alias gs=" git status"
-alias gd=" git d" # git diff with my custom options
+alias gd=" git diff" # git diff with my custom options
+alias gds=" git diff --staged" # git diff with my custom options
 alias gco="git checkout"
 alias gb=" git branch"
 alias ga=" git add"
 alias gcm="git commit"
+alias gdc="git duet-commit"
 alias gp=" git push"
 alias gh=" git hist"
 alias gfu="git fetch upstream"
