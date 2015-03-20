@@ -23,7 +23,7 @@ alias la="ls -lFGgohqa" # hidden files
 # bundle
 alias be="bundle exec"
 
-alias v="vi ."
+# go
 alias gofro="cd ~/Dropbox/projects/go/src/github.com/wfro"
 
 # rails
@@ -40,6 +40,7 @@ alias gds=" git diff --staged" # git diff with my custom options
 alias gco="git checkout"
 alias gb=" git branch"
 alias ga=" git add"
+alias gap=" git add -p"
 alias gcm="git commit"
 alias gdc="git duet-commit"
 alias gp=" git push"
