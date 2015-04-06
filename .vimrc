@@ -5,6 +5,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'tpope/vim-fugitive'
+Plugin 'rking/ag.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'benmills/vimux'
@@ -26,16 +27,16 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-ragtag'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
-" Plugin 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
 " Plugin 'noahfrederick/vim-hemisu'
-Plugin 'nanotech/jellybeans.vim'
+" Plugin 'nanotech/jellybeans.vim'
 
 call vundle#end()
 filetype plugin indent on
 
 " Mostly from https://github.com/JoshCheek/dotfiles/blob/master/vimrc
-" set background=dark
-colorscheme jellybeans
+set background=light
+colorscheme solarized
 syntax enable
 set encoding=utf-8
 set showcmd                     " display incomplete commands
@@ -81,6 +82,7 @@ map <Leader>cl oconsole.log();<esc>hi
 map <Leader>cd oconsole.log("debugging");<esc>:w %<cr>
 map <Leader>de odebugger;<esc>:w %<cr>
 map <Leader>r :w %<cr>:!npm test<cr>
+map <Leader>f :w %<cr>:!node %<cr>
 " go
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>t <Plug>(go-test)

@@ -59,8 +59,8 @@ function chpwd() {
     la -a
 }
 
-if [ -f ~/.zsh/zshalias ]; then
-  source ~/.zsh/zshalias
+if [ -f ~/.aliases ]; then
+  source ~/.aliases
 fi
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
