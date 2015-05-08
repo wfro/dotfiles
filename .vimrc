@@ -27,16 +27,18 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-ragtag'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'mxw/vim-jsx'
 Plugin 'altercation/vim-colors-solarized'
-" Plugin 'noahfrederick/vim-hemisu'
-" Plugin 'nanotech/jellybeans.vim'
+"Plugin 'noahfrederick/vim-hemisu'
+Plugin 'nanotech/jellybeans.vim'
 
 call vundle#end()
 filetype plugin indent on
 
 " Mostly from https://github.com/JoshCheek/dotfiles/blob/master/vimrc
-set background=light
-colorscheme solarized
+set background=dark
+colorscheme Tomorrow-Night-Bright
 syntax enable
 set encoding=utf-8
 set showcmd                     " display incomplete commands
@@ -54,8 +56,11 @@ set cursorline                  " colours the line the cursor is on
 set relativenumber              " relative line numbers
 set laststatus=2                " fix for airline not showing without split panes
 
-" Skittles ftw
-autocmd FileType clojure :RainbowParenthesesToggle
+" Skittles ftw - always on, don't use this
+" au VimEnter * RainbowParenthesesToggle
+" au Syntax * RainbowParenthesesLoadRound
+" au Syntax * RainbowParenthesesLoadSquare
+" au Syntax * RainbowParenthesesLoadBraces
 
 " close vim if NERDTree is the only open buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
