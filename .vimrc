@@ -27,7 +27,6 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-ragtag'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdcommenter'
 Plugin 'mxw/vim-jsx'
 Plugin 'altercation/vim-colors-solarized'
 "Plugin 'noahfrederick/vim-hemisu'
@@ -38,7 +37,7 @@ filetype plugin indent on
 
 " Mostly from https://github.com/JoshCheek/dotfiles/blob/master/vimrc
 set background=dark
-colorscheme Tomorrow-Night-Bright
+colorscheme solarized
 syntax enable
 set encoding=utf-8
 set showcmd                     " display incomplete commands
