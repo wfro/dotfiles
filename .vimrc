@@ -61,6 +61,9 @@ set laststatus=2                " fix for airline not showing without split pane
 " au Syntax * RainbowParenthesesLoadSquare
 " au Syntax * RainbowParenthesesLoadBraces
 
+" Syntastic breaks with JSX
+let g:syntastic_javascript_checkers = ['jsxhint']
+
 " close vim if NERDTree is the only open buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
