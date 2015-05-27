@@ -29,8 +29,6 @@ Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'altercation/vim-colors-solarized'
-"Plugin 'noahfrederick/vim-hemisu'
-Plugin 'nanotech/jellybeans.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -60,9 +58,6 @@ set laststatus=2                " fix for airline not showing without split pane
 " au Syntax * RainbowParenthesesLoadRound
 " au Syntax * RainbowParenthesesLoadSquare
 " au Syntax * RainbowParenthesesLoadBraces
-
-" Syntastic breaks with JSX
-let g:syntastic_javascript_checkers = ['jsxhint']
 
 " close vim if NERDTree is the only open buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
