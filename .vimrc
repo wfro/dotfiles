@@ -66,7 +66,7 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-let mapleader="," " remap leader to comma
+let mapleader=","
 imap kj <Esc>
 map <Leader>w :w %<cr>
 map <Leader>n :NERDTreeToggle<cr>
@@ -80,7 +80,7 @@ map <Leader>bn :!bundle install<cr>
 " javascript
 map <Leader>cl oconsole.log();<esc>hi
 map <Leader>cd oconsole.log("debugging");<esc>:w %<cr>
-map <Leader>de odebugger;<esc>:w %<cr>
+map <Leader>d odebugger;<esc>:w %<cr>
 map <Leader>r :w %<cr>:!npm test<cr>
 map <Leader>f :w %<cr>:!node %<cr>
 " go
