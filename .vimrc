@@ -72,7 +72,6 @@ map <Leader>w :w %<cr>
 map <Leader>n :NERDTreeToggle<cr>
 " ruby/rails
 map <Leader>p orequire "pry"; binding.pry<esc>
-map <Leader>db :e db/schema.rb<cr>
 map <Leader>em :Emodel<Space>
 map <Leader>ec :Econtroller<Space>
 map <Leader>es :Espec<Space>
@@ -80,7 +79,7 @@ map <Leader>bn :!bundle install<cr>
 " javascript
 map <Leader>cl oconsole.log();<esc>hi
 map <Leader>cd oconsole.log("debugging");<esc>:w %<cr>
-map <Leader>d odebugger;<esc>:w %<cr>
+map <Leader>df odebugger;<esc>:w %<cr>
 map <Leader>r :w %<cr>:!npm test<cr>
 map <Leader>f :w %<cr>:!node %<cr>
 " go
