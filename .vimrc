@@ -25,19 +25,15 @@ Plugin 'vim-scripts/paredit.vim'
 Plugin 'raimondi/delimitmate'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-ragtag'
-Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'altercation/vim-colors-solarized'
-"Plugin 'noahfrederick/vim-hemisu'
-Plugin 'nanotech/jellybeans.vim'
 
 call vundle#end()
 filetype plugin indent on
 
 " Mostly from https://github.com/JoshCheek/dotfiles/blob/master/vimrc
-set background=dark
-colorscheme solarized
+colorscheme obsidian
 syntax enable
 set encoding=utf-8
 set showcmd                     " display incomplete commands
@@ -52,7 +48,7 @@ set nowritebackup               " only in case you don't want a backup file whil
 set noswapfile                  " no swap files
 set scrolloff=4                 " adds top/bottom buffer between cursor and window
 set cursorline                  " colours the line the cursor is on
-set relativenumber              " relative line numbers
+set nu                          " line numbers
 set laststatus=2                " fix for airline not showing without split panes
 
 " Skittles ftw - always on, don't use this
