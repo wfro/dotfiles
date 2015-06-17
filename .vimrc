@@ -33,7 +33,7 @@ Plugin 'altercation/vim-colors-solarized'
 call vundle#end()
 filetype plugin indent on
 
-colorscheme obsidian
+colorscheme jellybeans
 syntax enable
 " Stolen wholesale from the illustrious Josh Cheek
 "   https://github.com/JoshCheek/dotfiles/blob/master/vimrc
