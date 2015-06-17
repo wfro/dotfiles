@@ -27,14 +27,16 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-ragtag'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mxw/vim-jsx'
+Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 filetype plugin indent on
 
-" Mostly from https://github.com/JoshCheek/dotfiles/blob/master/vimrc
 colorscheme obsidian
 syntax enable
+" Stolen wholesale from the illustrious Josh Cheek
+"   https://github.com/JoshCheek/dotfiles/blob/master/vimrc
 set encoding=utf-8
 set showcmd                     " display incomplete commands
 set nowrap                      " don't wrap lines
@@ -51,7 +53,7 @@ set cursorline                  " colours the line the cursor is on
 set nu                          " line numbers
 set laststatus=2                " fix for airline not showing without split panes
 
-" Skittles ftw - always on, don't use this
+" Rainbow parens - always on, don't use this
 " au VimEnter * RainbowParenthesesToggle
 " au Syntax * RainbowParenthesesLoadRound
 " au Syntax * RainbowParenthesesLoadSquare
