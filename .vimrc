@@ -65,11 +65,9 @@ let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-
-
-""""""""""""""
-" Bindings   "
-""""""""""""""
+""""""""""""
+" Bindings "
+""""""""""""
 
 " easier navigation between split windows
 nnoremap <c-j> <c-w>j
@@ -80,6 +78,8 @@ nnoremap <c-l> <c-w>l
 " let mapleader=","
 " Trying out space as leader
 let mapleader = "\<Space>"
+
+" Buffers
 
 " This allows buffers to be hidden if you've modified a buffer.
 " This is almost a must if you wish to use buffers in this way.
@@ -101,6 +101,9 @@ nmap <leader>bq :bp <BAR> bd #<CR>
 
 " Show all open buffers and their status
 nmap <leader>bl :ls<CR>
+
+" Other stuff
+
 imap kj <Esc>
 map <Leader>w :w %<cr>
 map <Leader>n :NERDTreeToggle<cr>
