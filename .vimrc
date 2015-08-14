@@ -65,9 +65,14 @@ let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-""""""""""""
-" Bindings "
-""""""""""""
+" ctrl-p
+let g:ctrlp_custom_ignore = {
+      \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
+      \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
+      \}
+
+" Use the nearest .git directory as the cwd.
+let g:ctrlp_working_path_mode = 'r'
 
 " easier navigation between split windows
 nnoremap <c-j> <c-w>j
@@ -75,8 +80,6 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-" let mapleader=","
-" Trying out space as leader
 let mapleader = "\<Space>"
 
 " Buffers
@@ -86,7 +89,6 @@ let mapleader = "\<Space>"
 set hidden
 
 " To open a new empty buffer
-" This replaces :tabnew which I used to bind to this mapping
 nmap <leader>T :enew<cr>
 
 " Move to the next buffer
@@ -102,29 +104,33 @@ nmap <leader>bq :bp <BAR> bd #<CR>
 " Show all open buffers and their status
 nmap <leader>bl :ls<CR>
 
-" Other stuff
-
 imap kj <Esc>
+
 map <Leader>w :w %<cr>
 map <Leader>n :NERDTreeToggle<cr>
+
 " ruby/rails
 map <Leader>p orequire "pry"; binding.pry<esc>
 map <Leader>em :Emodel<Space>
 map <Leader>ec :Econtroller<Space>
 map <Leader>es :Espec<Space>
 map <Leader>bn :!bundle install<cr>
+
 " javascript
 map <Leader>cl oconsole.log();<esc>hi
 map <Leader>cd oconsole.log("debugging");<esc>:w %<cr>
 map <Leader>df odebugger;<esc>:w %<cr>
 map <Leader>r :w %<cr>:!npm test<cr>
 map <Leader>f :w %<cr>:!node %<cr>
+
 " go
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>t <Plug>(go-test)
+
 " vimux - send commands to a tmux pane
 map <Leader>jj :w %<cr>:call VimuxRunCommand("clear; jasmine-node --verbose " . bufname("%"))<CR>
 map <Leader>js :w %<cr>:call VimuxRunCommand("clear; bundle exec rspec")<CR>
+
 " fugitive git bindings
 " https://www.reddit.com/r/vim/comments/21f4gm/best_workflow_when_using_fugitive/cgciltz
 nnoremap <Leader>ga :Git add %:p<CR><CR>
