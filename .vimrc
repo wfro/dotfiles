@@ -82,7 +82,7 @@ nnoremap <c-l> <c-w>l
 
 let mapleader = "\<Space>"
 
-" Buffers
+" Buffers (https://joshldavis.com/2014/04/05/vim-tab-madness-buffers-vs-tabs/)
 
 " This allows buffers to be hidden if you've modified a buffer.
 " This is almost a must if you wish to use buffers in this way.
