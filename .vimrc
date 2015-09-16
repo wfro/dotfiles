@@ -59,6 +59,10 @@ set laststatus=2                " fix for airline not showing without split pane
 " close vim if NERDTree is the only open buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+let mapleader = "\<Space>"
+
+" Buffers (https://joshldavis.com/2014/04/05/vim-tab-madness-buffers-vs-tabs/)
+
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
 
@@ -74,15 +78,6 @@ let g:ctrlp_custom_ignore = {
 " Use the nearest .git directory as the cwd.
 let g:ctrlp_working_path_mode = 'r'
 
-" easier navigation between split windows
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
-
-let mapleader = "\<Space>"
-
-" Buffers (https://joshldavis.com/2014/04/05/vim-tab-madness-buffers-vs-tabs/)
 
 " This allows buffers to be hidden if you've modified a buffer.
 " This is almost a must if you wish to use buffers in this way.
@@ -104,7 +99,15 @@ nmap <leader>bq :bp <BAR> bd #<CR>
 " Show all open buffers and their status
 nmap <leader>bl :ls<CR>
 
+" My keybinds
+
 imap kj <Esc>
+
+" easier navigation between split windows
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
 
 map <Leader>w :w %<cr>
 map <Leader>n :NERDTreeToggle<cr>
