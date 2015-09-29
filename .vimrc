@@ -61,6 +61,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 let mapleader = "\<Space>"
 
+let g:go_fmt_command = "goimports"
+
 " Buffers (https://joshldavis.com/2014/04/05/vim-tab-madness-buffers-vs-tabs/)
 
 " Enable the list of buffers
