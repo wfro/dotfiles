@@ -11,7 +11,6 @@ Plugin 'scrooloose/syntastic'
 Plugin 'benmills/vimux'
 Plugin 'jgdavey/vim-turbux'
 Plugin 'christoomey/vim-tmux-navigator'     " enables <C-h/j/k/l> split movement between tmux/vim
-Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
@@ -26,6 +25,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'elixir-lang/vim-elixir'
 
 call vundle#end()
 filetype plugin indent on
@@ -63,6 +63,10 @@ let mapleader = "\<Space>"
 
 let g:go_fmt_command = "goimports"
 
+let g:jsx_ext_required = 0
+
+let g:syntastic_javascript_checkers = ['eslint']
+
 " Buffers (https://joshldavis.com/2014/04/05/vim-tab-madness-buffers-vs-tabs/)
 
 " Enable the list of buffers
@@ -77,9 +81,11 @@ let g:ctrlp_custom_ignore = {
       \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
       \}
 
+" https://medium.com/a-tiny-piece-of-vim/making-ctrlp-vim-load-100x-faster-7a722fae7df6#.3j0ik4hv8
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
 " Use the nearest .git directory as the cwd.
 let g:ctrlp_working_path_mode = 'r'
-
 
 " This allows buffers to be hidden if you've modified a buffer.
 " This is almost a must if you wish to use buffers in this way.

@@ -1,10 +1,7 @@
 alias cdp="cd ~/Dropbox/projects"
 alias drive="cd ~/Drive/projects"
 alias cdd="cd ~/Dropbox/projects/dotfiles"
-alias todo="vim ~/Dropbox/projects/TODO.md"
-alias cdx="cd ~/Dropbox/projects/exercism"
-alias notes="cd ~/Dropbox/projects/notes/outlines"
-alias idb="cd ~/Dropbox/projects/go/src/github.com/influxdb"
+alias cdi="cd ~/Dropbox/projects/go/src/github.com/influxdb"
 
 # pretty pring json
 alias ppj="python -m json.tool"
