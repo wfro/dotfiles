@@ -150,6 +150,7 @@ map <Leader>js :w %<cr>:call VimuxRunCommand("clear; bundle exec rspec")<CR>
 " https://www.reddit.com/r/vim/comments/21f4gm/best_workflow_when_using_fugitive/cgciltz
 nnoremap <Leader>ga :Git add %:p<CR><CR>
 nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <Leader>gb :Gblame<CR>
 nnoremap <Leader>gc :Gcommit -v -q<CR>
 
 " Emacs/Readline keybindings for commandline mode
