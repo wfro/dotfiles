@@ -32,6 +32,7 @@ filetype plugin indent on
 
 colorscheme jellybeans
 syntax enable
+
 " Stolen wholesale from the illustrious Josh Cheek
 "   https://github.com/JoshCheek/dotfiles/blob/master/vimrc
 set encoding=utf-8
@@ -49,15 +50,14 @@ set scrolloff=4                 " adds top/bottom buffer between cursor and wind
 set cursorline                  " colours the line the cursor is on
 set nu                          " line numbers
 set laststatus=2                " fix for airline not showing without split panes
+set guioptions-=r
+set guioptions-=L
 
 " Rainbow parens - always on, don't use this
 " au VimEnter * RainbowParenthesesToggle
 " au Syntax * RainbowParenthesesLoadRound
 " au Syntax * RainbowParenthesesLoadSquare
 " au Syntax * RainbowParenthesesLoadBraces
-
-" close vim if NERDTree is the only open buffer
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 let mapleader = "\<Space>"
 
@@ -107,9 +107,13 @@ nmap <leader>bq :bp <BAR> bd #<CR>
 " Show all open buffers and their status
 nmap <leader>bl :ls<CR>
 
-" My keybinds
-
 imap kj <Esc>
+
+" Bind // to search with visually selected text
+vnoremap // y/<C-R>"<CR>
+
+" Remap : in visual mode to copy selected text to vim's command line
+vnoremap : y:<C-r>"<C-b>
 
 " easier navigation between split windows
 nnoremap <c-j> <c-w>j
