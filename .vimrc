@@ -26,6 +26,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'lambdatoast/elm.vim'
 
 call vundle#end()
 filetype plugin indent on
