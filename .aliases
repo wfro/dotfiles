@@ -1,12 +1,14 @@
 alias cdp="cd ~/Dropbox/projects"
 alias drive="cd ~/Drive/projects"
 alias cdd="cd ~/Dropbox/projects/dotfiles"
-alias cdi="cd ~/Dropbox/projects/go/src/github.com/influxdb"
+alias cdc="cd ~/Dropbox/projects/go/src/github.com/influxdata/chronograf"
+alias cdi="cd ~/Dropbox/projects/go/src/github.com/influxdata/influxdb"
+alias gofro="cd ~/Dropbox/projects/go/src/github.com/wfro"
 
-# pretty pring json
+alias vi="vim"
+
 alias ppj="python -m json.tool"
 
-# navigation
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -22,30 +24,24 @@ alias ......="cd ../../../../.."
 alias l="ls -lFGgohq"
 alias la="ls -lFGgohqa" # hidden files
 
-# bundle
 alias be="bundle exec"
 
-# go
-alias gofro="cd ~/Dropbox/projects/go/src/github.com/wfro"
-
-# rails
 alias cons="bundle exec rails c"
 alias sbox="bundle exec rails c --sandbox"
 alias dbm="bundle exec rake db:migrate"
 alias rr="bundle exec rake routes"
 
-# git
 alias gsh="git s" # git show with my custom options (see gitconfig)
-alias gs=" git status"
-alias gd=" git diff" # git diff with my custom options
-alias gds=" git diff --staged" # git diff with my custom options
+alias gs="git status"
+alias gd="git diff" # git diff with my custom options
+alias gds="git diff --staged"
 alias gco="git checkout"
 alias gb=" git branch"
 alias ga=" git add"
-alias gap=" git add -p"
+alias gap="git add -p"
 alias gcm="git commit"
 alias gdc="git duet-commit"
-alias gp=" git push"
-alias gh=" git hist"
+alias gp="git push"
+alias gh="git hist"
 alias gfu="git fetch upstream"
 
