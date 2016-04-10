@@ -27,6 +27,7 @@ Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'lambdatoast/elm.vim'
+Plugin 'plasticboy/vim-markdown'
 
 call vundle#end()
 filetype plugin indent on
