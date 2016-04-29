@@ -109,11 +109,7 @@ nmap <leader>bl :ls<CR>
 
 imap kj <Esc>
 
-" Bind // to search with visually selected text
-vnoremap // y/<C-R>"<CR>
-
-" Remap : in visual mode to copy selected text to vim's command line
-vnoremap : y:<C-r>"<C-b>
+map <leader>a :execute "Ag " . expand("<cword>") <CR>
 
 " easier navigation between split windows
 nnoremap <c-j> <c-w>j
