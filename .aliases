@@ -1,5 +1,6 @@
 alias cdp="cd ~/Dropbox/projects"
 alias drive="cd ~/Drive/projects"
+alias notes="cd ~/Drive/projects/notes"
 alias cdd="cd ~/Dropbox/projects/dotfiles"
 alias gofro="cd ~/Dropbox/projects/go/src/github.com/wfro"
 
