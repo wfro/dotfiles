@@ -1,4 +1,4 @@
-set nocompatible                " required by Vundle
+set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -10,7 +10,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'benmills/vimux'
 Plugin 'jgdavey/vim-turbux'
-Plugin 'christoomey/vim-tmux-navigator'     " enables <C-h/j/k/l> split movement between tmux/vim
+Plugin 'christoomey/vim-tmux-navigator' " enables <C-h/j/k/l> split movement between tmux/vim
 Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
@@ -50,14 +50,6 @@ set scrolloff=4                 " adds top/bottom buffer between cursor and wind
 set cursorline                  " colours the line the cursor is on
 set nu                          " line numbers
 set laststatus=2                " fix for airline not showing without split panes
-set guioptions-=r
-set guioptions-=L
-
-" Rainbow parens - always on, don't use this
-" au VimEnter * RainbowParenthesesToggle
-" au Syntax * RainbowParenthesesLoadRound
-" au Syntax * RainbowParenthesesLoadSquare
-" au Syntax * RainbowParenthesesLoadBraces
 
 let mapleader = "\<Space>"
 
