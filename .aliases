@@ -8,6 +8,7 @@ alias idb="cd ~/Dropbox/projects/go/src/github.com/influxdata/influxdb"
 alias tele="cd ~/Dropbox/projects/go/src/github.com/influxdata/telegraf"
 alias cus="cd ~/Dropbox/projects/go/src/github.com/influxdata/influxdb-customers"
 alias chro="cd ~/Dropbox/projects/go/src/github.com/influxdata/chronograf"
+alias ent="cd ~/Dropbox/projects/go/src/github.com/influxdata/enterprise"
 
 alias vi="vim"
 
