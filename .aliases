@@ -4,11 +4,13 @@ alias notes="cd ~/Drive/projects/notes"
 alias cdd="cd ~/Dropbox/projects/dotfiles"
 alias gofro="cd ~/Dropbox/projects/go/src/github.com/wfro"
 
-alias idb="cd ~/Dropbox/projects/go/src/github.com/influxdata/influxdb"
-alias tele="cd ~/Dropbox/projects/go/src/github.com/influxdata/telegraf"
-alias cus="cd ~/Dropbox/projects/go/src/github.com/influxdata/influxdb-customers"
-alias chro="cd ~/Dropbox/projects/go/src/github.com/influxdata/chronograf"
-alias ent="cd ~/Dropbox/projects/go/src/github.com/influxdata/enterprise"
+alias idb="cd ~/projects/go/src/github.com/influxdata/influxdb"
+alias tele="cd ~/projects/go/src/github.com/influxdata/telegraf"
+alias cus="cd ~/projects/go/src/github.com/influxdata/influxdb-customers"
+alias chro="cd ~/projects/go/src/github.com/influxdata/chronograf"
+alias ent="cd ~/projects/go/src/github.com/influxdata/enterprise"
+
+alias psg="ps aux | grep"
 
 alias vi="vim"
 
