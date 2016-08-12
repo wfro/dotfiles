@@ -26,6 +26,7 @@ Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'lambdatoast/elm.vim'
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 filetype plugin indent on
@@ -58,6 +59,8 @@ let g:go_fmt_command = "goimports"
 let g:jsx_ext_required = 0
 
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 
 " Buffers (https://joshldavis.com/2014/04/05/vim-tab-madness-buffers-vs-tabs/)
 
