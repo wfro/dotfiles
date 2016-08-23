@@ -60,7 +60,6 @@ let g:jsx_ext_required = 0
 
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 
 " Buffers (https://joshldavis.com/2014/04/05/vim-tab-madness-buffers-vs-tabs/)
 
