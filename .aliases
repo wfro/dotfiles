@@ -1,14 +1,8 @@
-alias cdp="cd ~/Dropbox/projects"
+alias cdp="cd ~/codes"
 alias drive="cd ~/Drive/projects"
-alias notes="cd ~/Drive/projects/notes"
-alias cdd="cd ~/Dropbox/projects/dotfiles"
+alias notes="cd ~/Dropbox/notes"
+alias cdd="cd ~/codes/dotfiles"
 alias gofro="cd ~/Dropbox/projects/go/src/github.com/wfro"
-
-alias idb="cd ~/projects/go/src/github.com/influxdata/influxdb"
-alias tele="cd ~/projects/go/src/github.com/influxdata/telegraf"
-alias cus="cd ~/projects/go/src/github.com/influxdata/influxdb-customers"
-alias chro="cd ~/projects/go/src/github.com/influxdata/chronograf"
-alias ent="cd ~/projects/go/src/github.com/influxdata/enterprise"
 
 alias psg="ps aux | grep"
 

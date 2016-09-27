@@ -51,8 +51,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="$PATH:/Users/will/.rvm/gems/ruby-2.1.2/bin:/Users/will/.rvm/gems/ruby-2.1.2@global/bin:/Users/will/.rvm/rubies/ruby-2.1.2/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/will/bin:/Users/will/.rvm/bin"
-
 # ls after cd
 function chpwd() {
     emulate -L zsh
@@ -63,6 +61,8 @@ if [ -f ~/.aliases ]; then
   source ~/.aliases
 fi
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export GOPATH=$HOME/Dropbox/projects/go
 export PATH=$PATH:$GOPATH/bin
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
