@@ -46,3 +46,5 @@ alias gp="git push"
 alias gh="git hist"
 alias gfu="git fetch upstream"
 
+alias mastr="git pull -r origin master"
+
