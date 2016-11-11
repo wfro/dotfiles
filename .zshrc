@@ -61,6 +61,10 @@ if [ -f ~/.aliases ]; then
   source ~/.aliases
 fi
 
+if [ -f ~/.secretz ]; then
+  source ~/.secretz
+fi
+
 export GOPATH=$HOME/Dropbox/projects/go
 export PATH=$PATH:$GOPATH/bin:$HOME/bin
 
