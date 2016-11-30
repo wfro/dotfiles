@@ -65,11 +65,13 @@ if [ -f ~/.secretz ]; then
   source ~/.secretz
 fi
 
-export GOPATH=$HOME/Dropbox/projects/go
-export PATH=$PATH:$GOPATH/bin:$HOME/bin
+# rabbitmq
+PATH=$PATH:/usr/local/sbin
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 export NVM_DIR="/Users/willfaurot/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+[[ -s "/Users/willfaurot/.gvm/scripts/gvm" ]] && source "/Users/willfaurot/.gvm/scripts/gvm"

@@ -44,6 +44,8 @@ alias gcm="git commit"
 alias gdc="git duet-commit"
 alias gp="git push"
 alias gh="git hist"
+alias gg="git grep"
+
 alias gfu="git fetch upstream"
 
 alias mastr="git pull -r origin master"
