@@ -50,3 +50,4 @@ alias gfu="git fetch upstream"
 
 alias mastr="git pull -r origin master"
 
+alias quick-rebase="git rebase -i @~10"
