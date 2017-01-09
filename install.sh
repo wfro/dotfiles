@@ -8,4 +8,5 @@
 # how to do atom config?
 
 # do symlinks
+# how to loop through with a blob?
 
