@@ -51,7 +51,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# ls after cd
+# run ls after cd
 function chpwd() {
     emulate -L zsh
     la -a
@@ -68,7 +68,9 @@ fi
 # rabbitmq
 PATH=$PATH:/usr/local/sbin
 
-export PATH="$HOME/.rbenv/bin:$PATH"
+PATH=$PATH:$HOME/bin
+
+PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 export NVM_DIR="/Users/willfaurot/.nvm"
