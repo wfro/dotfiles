@@ -1,0 +1,16 @@
+packages: [
+  "atom-material-syntax"
+  "atom-material-ui"
+  "atom-ternjs"
+  "autocomplete-ruby"
+  "dash"
+  "git-blame"
+  "language-haml"
+  "linter"
+  "linter-eslint"
+  "linter-rubocop"
+  "monokai"
+  "package-sync"
+  "react"
+  "vim-mode"
+]
