@@ -2,7 +2,7 @@
 # xcode-select --install
 
 bootstrap() {
-  # install homebrew
+  # homebrew
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
   brew update
@@ -17,6 +17,10 @@ bootstrap() {
   brew install vim --with-override-system-vi
 
   brew cleanup
+
+  # zsh
+  # git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+  # chsh -s /bin/zsh
 
   # nvm
   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | zsh
