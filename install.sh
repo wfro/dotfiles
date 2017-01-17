@@ -13,6 +13,7 @@ bootstrap() {
   brew install the_silver_searcher
   brew install rbenv # ruby
   brew install opam  # ocaml
+  brew install exercism
 
   brew install vim --with-override-system-vi
 
