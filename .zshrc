@@ -65,6 +65,10 @@ if [ -f ~/.secretz ]; then
   source ~/.secretz
 fi
 
+# OPAM configuration
+. /Users/willfaurot/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+eval $(opam config env)
+
 # rabbitmq
 PATH=$PATH:/usr/local/sbin
 
@@ -77,3 +81,4 @@ export NVM_DIR="/Users/willfaurot/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 [[ -s "/Users/willfaurot/.gvm/scripts/gvm" ]] && source "/Users/willfaurot/.gvm/scripts/gvm"
+
