@@ -42,5 +42,11 @@
   'ctrl-cmd-t': 'pane:close-other-items'
 
 'atom-text-editor':
-  'ctrl-k': 'window:focus-pane-above'
-  'ctrl-cmd-b': 'git-blame:toggle'
+  'ctrl-cmd-b': 'git-blame:toggle' # git blame in gutter
+  'ctrl-cmd-p': 'snips:pry' # git blame in gutter
+
+'atom-workspace':
+  'ctrl-i':     'cursor-history:next'
+  'ctrl-o':     'cursor-history:prev'
+  'ctrl-cmd-i': 'cursor-history:next-within-editor'
+  'ctrl-cmd-o': 'cursor-history:prev-within-editor'

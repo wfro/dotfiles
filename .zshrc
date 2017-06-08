@@ -65,6 +65,9 @@ if [ -f ~/.secretz ]; then
   source ~/.secretz
 fi
 
+# helpful for bundle open <gem>
+export EDITOR=atom
+
 # OPAM configuration
 . /Users/willfaurot/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 eval $(opam config env)

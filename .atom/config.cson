@@ -9,7 +9,7 @@
     ]
   editor:
     fontFamily: "Source Code Pro"
-    fontSize: 15
+    fontSize: 17
     showIndentGuide: true
     showInvisibles: true
   "exception-reporting":
@@ -22,5 +22,11 @@
   "package-sync":
     createOnChange: true
     forceOverwrite: true
+  "prettier-atom":
+    formatOnSaveOptions: {}
+    prettierOptions:
+      printWidth: 100
+      semi: false
+      singleQuote: true
   welcome:
     showOnStartup: false
