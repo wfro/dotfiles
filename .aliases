@@ -54,3 +54,5 @@ alias quick-rebase="git rebase -i @~10"
 
 # Every single day I redefine my understanding of how often I can mispell this one
 alias zues=zeus
+
+alias git-recent="git for-each-ref --sort=committerdate refs/heads/"
